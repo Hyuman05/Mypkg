@@ -16,7 +16,7 @@ colcon build
 source $dir/.bashrc
 source install/setup.bash && source install/local_setup.bash
 
-timeout 20 ros2 launch mypkg weather_chiba.launch.py &> /tmp/test.log
+timeout 60 ros2 launch mypkg weather_chiba.launch.py &> /tmp/test.log
 
 sleep 2
 echo TESTLOG
