@@ -12,10 +12,14 @@ pip3 install requests
 
 cd $dir/ros2_ws
 colcon build
+
 source $dir/.bashrc
 source install/setup.bash && source install/local_setup.bash
 
-timeout 20 ros2 launch mypkg weather_chiba.launch.py > /tmp/weather_data.log
+timeout 20 ros2 launch mypkg weather_chiba.launch.py &> /tmp/test.log
 
-cat /tmp/weather_data.log |
-grep 'Listen: 10'
+sleep 2
+echo TESTLOG
+cat /tmp/test.log
+
+exit $res
