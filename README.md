@@ -8,6 +8,8 @@
 - このデータは気象庁のデータを用いています。
 ```
   url ("https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=120000")
+```
+```
   url ("https://www.jma.go.jp/bosai/forecast/data/forecast/120000.json")
 ```
 ## 依存関係
