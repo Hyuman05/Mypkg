@@ -1,17 +1,17 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Int16
+from std_msgs.msg import String
 
 
 rclpy.init()
 node = Node("listener")
 
 
-def cb(msg):
+def cb(sub):
     global node
-    node.get_logger().info("Listen: %d" % msg.data)
+    node.get_logger().info("Listen: %s" % sub.data)
 
 
 def main():
-    pub = node.create_subscription(Int16, "countup", cb, 10)
+    sub = node.create_subscription(String, "weather_data", cb, 10)
     rclpy.spin(node)
