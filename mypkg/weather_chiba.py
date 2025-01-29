@@ -21,8 +21,12 @@ class WeatherChibaNode(Node):
             today_weather = weather_data[0]["timeSeries"][0]["areas"][0]["weathers"][0]
             today_temp_min = weather_data[0]["timeSeries"][2]["areas"][0]["temps"][0]
             today_temp_max = weather_data[0]["timeSeries"][2]["areas"][0]["temps"][1]
-
-            return f"【今日の天気】 天気: {today_weather}, 最低気温: {today_temp_min}°C, 最高気温: {today_temp_max}°C"
+            if today_temp_min == today_temp_max:
+               today_temp_min = '-'
+            tomorrow_weather = weather_data[0]["timeSeries"][0]["areas"][0]["weathers"][1]
+            tomorrow_temp_min = weather_data[0]["timeSeries"][2]["areas"][0]["temps"][2]
+            tomorrow_temp_max = weather_data[0]["timeSeries"][2]["areas"][0]["temps"][3]
+            return f"【今日の天気】 天気: {today_weather}, 最低気温: {today_temp_min}°C, 最高気温: {today_temp_max}°C \n【明日の天気】天気: {tomorrow_weather}, 最低気温: {tomorrow_temp_min}°C, 最高気温: {tomorrow_temp_max}°C"
         except Exception as e:
             self.get_logger().error(f"天気データ取得中にエラーが発生しました: {e}")
             return "天気データを取得できませんでした。"
