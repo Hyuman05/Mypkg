@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Hyuta Sasaki
+# SPDX-License-Indetifier: BSD-3-Clause
+
 import launch
 import launch.actions
 import launch.substitutions
