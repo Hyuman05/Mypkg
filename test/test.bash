@@ -18,7 +18,7 @@ source install/setup.bash && source install/local_setup.bash
 
 timeout 20 ros2 launch mypkg weather_chiba.launch.py &> /tmp/weather_data.log
 
-sleep 20
+sleep 2
 echo TESTLOG
 cat /tmp/weather_data.log
 
