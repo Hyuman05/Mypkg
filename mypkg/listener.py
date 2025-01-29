@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Hyuta Sasaki
+# SPDX-License-Identifer: BSD-3-Clause
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
