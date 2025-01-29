@@ -5,7 +5,7 @@
 ## ノードの概念
 - このパッケージはデータを取得して、千葉の今日と明日の天気をtopic名'weather_data'に送信します。
 - 詳細　今日、明日の天気と最低気温と最高気温
-- このデータは気象庁のデータを用いています。
+- このデータは気象庁のデータを用いています。(以下はurl)
 ```
   url ("https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=120000")
 ```
