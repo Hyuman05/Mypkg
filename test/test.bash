@@ -22,9 +22,12 @@ sleep 2
 echo TESTLOG
 cat /tmp/weather_data.log
 
-if grep -qE 'Listen: 場所: 千葉県千葉市【今日の天気】 天気: 晴れ　昼過ぎ　から　時々　くもり　所により　雨　で　雷を伴う, 最低気温: -°C, 最高気温: 12°C  【明日の天気】天気: 晴れ, 最低気温: 5°C, 最高気温: 10°C' /tmp/test.log; then
+if grep -E 'Listen: 場所: 千葉県千葉市【今日の天気】 天気: 晴れ　昼過ぎ　から　時々　くもり　所により　雨　で　雷を伴う, 最低気温: -°C, 最高気温: 12°C  【明日の天気】天気: 晴れ, 最低気温: 5°C, 最高気温: 10°C' /tmp/testlog; then
     echo "成功"
 else
     echo "失敗"
     res=1
+fi
+
+
 exit $res
