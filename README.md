@@ -12,7 +12,10 @@
 ```
   url ("https://www.jma.go.jp/bosai/forecast/data/forecast/120000.json")
 ```
-## 依存関係
+## 準備
+```
+git clone https://github.com/Hyuman05/mypkg.git
+```
 このパッケージを使用する際に必要です。
 ```
 $ sudo apt install python3-pip
